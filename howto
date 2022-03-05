@@ -1,0 +1,10 @@
+1. Клонировал репозиторий https://github.com/Kotlin-Polytech/KotlinAsFirst2020
+2. Указали в качестве upstream-my свой форк KotlinAsFirst2021 (git remote add upstream-my https://github.com/EgorShalak/KotlinAsFirst2021.git)
+3. Создал ветку backport и перенесли в нее коммиты с решениями из KotlinAsFirst2021 (
+            git branch backport; git fetch upstream-my; git checkout backport; git cherry-pick d535f3592006b8f2593c9f881d72c05164aadc13...FETCH_HEAD
+)
+4. Взял форк напарника и указал его в качестве второго upstream-theirs (git remote add  upstream-theirs https://github.com/IlyaFonichev/KotlinAsFirst2021.git)
+5. Смерджил его и мои решения в ветку master (git merge backport upstream-theirs/master)
+6. Решение конфликтов.
+7. Создал в корне проекта файл remotes.
+8. Создал howto.md, где описал ход практики.
